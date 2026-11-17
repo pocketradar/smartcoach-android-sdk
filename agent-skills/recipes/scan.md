@@ -75,6 +75,10 @@ paired with if it is found during the scan. `startScanning` also takes an option
 - **Missing runtime permissions throw `permissionDenied`, Bluetooth off throws
   `bluetoothNotAvailable`.** Route the first to the permission request, the second to a
   "turn on Bluetooth" message.
+- **The list only shows radar models the API key covers.** A radar of another model never
+  appears, even in pairing mode. `startScanning()` throws `featureNotAvailable` if the key
+  covers no model, and `invalidEntitlements` if the entitlements can't be fetched (the
+  first scan needs network access; afterwards they work offline for about 21 days).
 
 ---
 

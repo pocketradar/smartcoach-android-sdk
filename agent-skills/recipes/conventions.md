@@ -71,6 +71,11 @@ These hold no matter how the app is structured:
 - **Every failure is a thrown `SmartCoachError`.** Catch `SmartCoachError` and branch on
   `e.code` (a `SmartCoachErrorCode`); `e.message` is a readable description. Don't catch
   `Exception` broadly — it would swallow coroutine cancellation.
+- **Entitlements gate scanning, connecting and measuring.** The API key decides which
+  radar models the app may use. A call it doesn't allow throws `featureNotAvailable`;
+  entitlements that can't be fetched or verified throw `invalidEntitlements`. Neither is
+  fixed by retrying in a loop: show the message, and for `invalidEntitlements` let the user
+  retry once they have network access.
 - **Results arrive via the state stream, not return values.** Actions start work; the
   outcome shows up as a later `SmartCoachSessionState`.
 - **The session follows the radar.** The radar can start or stop measuring on its own

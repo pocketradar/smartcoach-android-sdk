@@ -121,6 +121,9 @@ only shows recent readings.
 - **`startMeasuring()` requires `connected` or `measuring`.** Not `connecting`, not
   "right after `connect()` returned." The SDK throws `invalidSessionState` otherwise.
   From `measuring` it sends nothing: you just get the readings.
+- **Measuring needs the `measurement` entitlement for the radar's model**, otherwise
+  `startMeasuring()` throws `featureNotAvailable`. Report it (the reference code does when
+  the user asked to measure); hide the measuring controls if the app knows its key lacks it.
 - **The radar can start measuring by itself** (its trigger). The session becomes
   `measuring` without an app call — that is why the `measuring` branch subscribes when no
   readings job is running. Never treat an unexpected `measuring` as an error.

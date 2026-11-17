@@ -62,6 +62,10 @@ fun disconnect() {
   arrives as `disconnected(error)` on the stream.
 - **Connecting while already connected/connecting throws `invalidSessionState`.** The
   guard above avoids the common case.
+- **Connecting needs the `connect` entitlement for the radar's model**, otherwise
+  `connect()` throws `featureNotAvailable`. A radar whose model turns out, once connected,
+  not to be covered is dropped: the session ends in `disconnected` with
+  `noDeviceConnected`. The same check applies to auto-connect and auto-reconnect.
 - **Reconnection is automatic only for *unexpected* disconnects**, and only when the SDK
   was configured with `autoReconnect = true`. The SDK drives it and surfaces
   `reconnecting(radar)` on the stream; show it in the UI if you want, but do not call

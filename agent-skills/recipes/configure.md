@@ -55,6 +55,10 @@ Ask for, in one exchange:
    `compileSdk` to 36 (or upgrade Kotlin/AGP). If they decline, stop: the SDK can't be
    added to this app as it is.
 
+The key is issued for one application ID. Read the app module's `applicationId` (and any
+`applicationIdSuffix` on build types or flavors) and tell the user which application ID the
+key must be registered for; a debug build with a suffix is a different application ID.
+
 Note on key handling: the key ships readable inside the APK and gets committed with the
 project. That is the expected model for this SDK (the backend enforces entitlements
 server-side), but if the user's repo is public or they object, suggest supplying it
@@ -240,8 +244,12 @@ following the app's existing convention.
 - On a real phone: launch should log no configuration failure, and the permission
   request should appear on the scanning screen. `configure()` needs no Bluetooth and works
   on the emulator; scanning and connecting need real hardware.
-- Failure decoding: `missingApiKey` → the `<meta-data>` entry is missing or misnamed.
-  `permissionDenied` on scan → the runtime request didn't run or was denied. A Gradle
+- Failure decoding: `missingApiKey` → the `<meta-data>` entry is missing, misnamed, or not
+  a UUID. `invalidEntitlements` on the first scan → no network, a wrong key, or a key issued
+  for a different application ID (check `applicationIdSuffix`). `featureNotAvailable` →
+  the key doesn't cover that call for that radar model (or the phone is offline and has
+  never fetched entitlements). `permissionDenied` on scan → the runtime request didn't run
+  or was denied. A Gradle
   "Could not find com.pocketradar:smartcoach" → the repository line is missing or in the
   wrong block. "Manifest merger failed … minSdkVersion" → `minSdk` below 29.
 
@@ -254,6 +262,8 @@ following the app's existing convention.
   never fatal.
 - **Never crash the host app over configuration.** Catch and report; the SDK surfaces
   `notConfigured` on later calls, which is diagnosable.
+- **The API key is bound to the application ID.** `configure()` only checks that a key is
+  present; the entitlements service checks the key and application ID on the first scan.
 - **The SDK declares its permissions; the app requests the runtime ones.** Never
   duplicate the SDK's `<uses-permission>` entries, and never skip the runtime request.
 - **Don't upgrade the build toolchain or SDK levels without the user's agreement.**

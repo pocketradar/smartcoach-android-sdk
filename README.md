@@ -78,6 +78,21 @@ Add your API key to your app's `AndroidManifest.xml`, inside `<application>`:
     android:value="YOUR_API_KEY_HERE" />
 ```
 
+### Entitlements
+
+Your API key is issued for one **application ID** (your app's package name) and decides which radar models your app may scan for, connect to and measure with. A partner whose Android application ID differs from their iOS bundle ID needs a separate key for Android.
+
+- The SDK fetches the entitlements from Pocket Radar the first time a call needs them, so the first scan needs network access. It refreshes them as they expire.
+- Offline, the last entitlements fetched stay valid for about 21 days.
+- Scanning only finds radar models your key covers.
+
+| Error code | Meaning | What to check |
+|---|---|---|
+| `missingApiKey` (1003) | `configure` found no API key, or it isn't a UUID. | The `com.pocketradar.smartcoach.API_KEY` `<meta-data>` entry. |
+| `invalidEntitlements` (3002) | The entitlements couldn't be fetched or verified. | Network access, the API key, and that the key was issued for this application ID (including any `applicationIdSuffix` of your build type). |
+| `featureNotAvailable` (3001) | Your key doesn't cover this call for this radar model, or the phone is offline and has never fetched entitlements. | Your entitlements, with partners@pocketradar.com. |
+| `noDeviceConnected` (4003) on `disconnected` | The radar connected but its model isn't covered by your key, so the SDK dropped it. | Your entitlements. |
+
 ### Bluetooth Permissions
 
 The SDK declares the Bluetooth, location and foreground-service permissions it needs in its own manifest; they merge into your app automatically. Android also requires your app to **request** some of them at runtime before scanning:
