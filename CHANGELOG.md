@@ -2,6 +2,23 @@
 
 All notable changes to the SmartCoach Android SDK. The SDK is in beta; APIs may change between releases.
 
+## 0.2.0-beta.2
+
+### Fixed
+
+- SmartCoach 2 radars connect. The SDK missed the radar's confirmation of the connection and
+  gave up after the handshake timeout.
+- SmartCoach 2 readings report the speed the radar displays, in the radar's unit. They were
+  decoded wrongly and dropped.
+- `setMeasurementUnit` on a SmartCoach 2 no longer throws `commandFailed` after the radar has
+  switched. The radar doesn't announce the change, so the SDK now reads the unit back.
+
+### Known limitations
+
+- A SmartCoach 2 can drop the connection a few seconds after measuring starts: its Bluetooth
+  stops responding while the radar keeps running. This is in the radar firmware. The SDK
+  reconnects on its own and the session reports the radar as connected, not measuring.
+
 ## 0.2.0-beta.1
 
 The first Android release. The API matches the iOS SDK 0.2.0-beta.1 name for name; the
