@@ -3,11 +3,12 @@
   <groupId>com.pocketradar</groupId>
   <artifactId>smartcoach</artifactId>
   <versioning>
-    <latest>0.2.0-beta.1</latest>
-    <release>0.2.0-beta.1</release>
+    <latest>0.2.0-beta.2</latest>
+    <release>0.2.0-beta.2</release>
     <versions>
       <version>0.2.0-beta.1</version>
+      <version>0.2.0-beta.2</version>
     </versions>
-    <lastUpdated>20261117165112</lastUpdated>
+    <lastUpdated>20261118023957</lastUpdated>
   </versioning>
 </metadata>

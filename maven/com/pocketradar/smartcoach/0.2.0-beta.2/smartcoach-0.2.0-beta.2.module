@@ -1,0 +1,111 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "com.pocketradar",
+    "module": "smartcoach",
+    "version": "0.2.0-beta.2",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "9.2.1"
+    }
+  },
+  "variants": [
+    {
+      "name": "releaseVariantReleaseApiPublication",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.libraryelements": "aar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlinx",
+          "module": "kotlinx-coroutines-core",
+          "version": {
+            "requires": "1.7.3"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "2.2.10"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "smartcoach-0.2.0-beta.2.aar",
+          "url": "smartcoach-0.2.0-beta.2.aar",
+          "size": 254407,
+          "sha512": "4f01f8a1ea51bd71aa33526ebe0310109f72a327782b97f0765403ed2e7691499edd0d4bf2989b2e71532e9ccaf05a9af65c30f1be18f3abfa7fc9873534d8ba",
+          "sha256": "104722eeebefba922c508e787263ba7a03139768691ff4c855e240ad0c8fc259",
+          "sha1": "88de5afc65c5028c980c21a188b2e6e591ce7d6e",
+          "md5": "2cdf66b00f5bac8ee4bcb7b351aa9e22"
+        }
+      ]
+    },
+    {
+      "name": "releaseVariantReleaseRuntimePublication",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.libraryelements": "aar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "androidx.core",
+          "module": "core",
+          "version": {
+            "requires": "1.16.0"
+          }
+        },
+        {
+          "group": "androidx.lifecycle",
+          "module": "lifecycle-livedata-ktx",
+          "version": {
+            "requires": "2.9.3"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlinx",
+          "module": "kotlinx-coroutines-android",
+          "version": {
+            "requires": "1.7.3"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlinx",
+          "module": "kotlinx-coroutines-core",
+          "version": {
+            "requires": "1.7.3"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "2.2.10"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "smartcoach-0.2.0-beta.2.aar",
+          "url": "smartcoach-0.2.0-beta.2.aar",
+          "size": 254407,
+          "sha512": "4f01f8a1ea51bd71aa33526ebe0310109f72a327782b97f0765403ed2e7691499edd0d4bf2989b2e71532e9ccaf05a9af65c30f1be18f3abfa7fc9873534d8ba",
+          "sha256": "104722eeebefba922c508e787263ba7a03139768691ff4c855e240ad0c8fc259",
+          "sha1": "88de5afc65c5028c980c21a188b2e6e591ce7d6e",
+          "md5": "2cdf66b00f5bac8ee4bcb7b351aa9e22"
+        }
+      ]
+    }
+  ]
+}

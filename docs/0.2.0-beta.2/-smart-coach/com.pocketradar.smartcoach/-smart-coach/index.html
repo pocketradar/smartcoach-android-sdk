@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>SmartCoach</title>
+    <link href="../../../images/logo-icon.svg" rel="icon" type="image/svg">
+        <script>var pathToRoot = "../../../";</script>
+    <script>document.documentElement.classList.replace("no-js", "js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+      if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      } else {
+        const savedDarkMode = JSON.parse(storage)
+        if (savedDarkMode === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async="async"></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../ui-kit/ui-kit.min.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/safe-local-storage_blocking.js"></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer="defer"></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async="async"></script>
+<script type="text/javascript" src="../../../ui-kit/ui-kit.min.js" defer="defer"></script>
+</head>
+<body>
+<div class="root">
+    <header class="navigation theme-dark" id="navigation-wrapper" role="banner">
+            <a class="library-name--link" href="../../../index.html" tabindex="1">
+                    SmartCoach
+            </a>
+        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle"
+                type="button">Toggle table of contents
+        </button>
+        <div class="navigation-controls--break ui-kit_mobile-only"></div>
+        <div class="library-version" id="library-version">
+0.2.0-beta.2        </div>
+        <div class="navigation-controls">
+        <ul class="filter-section filter-section_loading" id="filter-section" aria-label="Target filter">
+                <button class="platform-tag platform-selector jvm-like" data-active="" aria-pressed="true"
+                        data-filter=":smartcoach/main">androidJvm</button>
+            <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
+                <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox"
+                        data-role="dropdown-toggle"
+                        aria-controls="platform-tags-listbox"
+                        aria-haspopup="listbox"
+                        aria-expanded="false"
+                        aria-label="Toggle source sets"
+                ></button>
+                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox" aria-label="Target filter">
+                    <div class="dropdown--header"><span>Target filter</span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close target filter">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                        <li role="option" class="dropdown--option platform-selector-option jvm-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":smartcoach/main"
+                                       data-filter=":smartcoach/main"/>
+                                <span class="checkbox--icon"></span>
+                                androidJvm
+                            </label>
+                        </li>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </ul>
+            <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button"
+                    type="button">Switch theme
+            </button>
+            <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
+                API
+            </div>
+        </div>
+    </header>
+    <div id="container">
+        <nav id="leftColumn" class="sidebar" data-item-type="SECTION" data-item-config='{"defaultSize": 280, "minSize": 200, "maxSize": 400}'>
+            <a class="toc--skip-link" href="#main">Skip to content</a>
+            <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list"
+                    data-role="dropdown-listbox" aria-label="Table of contents">
+                    <div class="dropdown--header">
+                            <span>
+                                    SmartCoach
+                            </span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                    <div class="sidebar--inner" id="sideMenu"></div>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </nav>
+        <div id="resizer" class="resizer" data-item-type="BAR"></div>
+        <div id="main" data-item-type="SECTION" role="main">
+<div class="main-content" data-page-type="classlike" id="content" pageIds="SmartCoach::com.pocketradar.smartcoach/SmartCoach///PointingToDeclaration//1106108632">
+  <div class="breadcrumbs"><a href="../../../index.html">SmartCoach</a><span class="delimiter">/</span><a href="../index.html">com.pocketradar.smartcoach</a><span class="delimiter">/</span><span class="current">SmartCoach</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span>Smart</span><wbr></wbr><span><span>Coach</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":smartcoach/main"><div class="symbol monospace"><span class="token keyword">object </span><a href="index.html">SmartCoach</a></div><p class="paragraph">Entry point of the SmartCoach SDK: configure it once, scan for radars, connect, and stream speed readings. Mirrors the iOS SDK's <code class="lang-kotlin">SmartCoach</code> API name for name.</p><p class="paragraph">Every function is main-safe and can be called from any coroutine. All failures are thrown as <a href="../-smart-coach-error/index.html">SmartCoachError</a>. The SDK runs one session at a time; <a href="session-state-stream.html">sessionStateStream</a> is the single source of truth for where it is.</p><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">SmartCoach.configure(applicationContext)<br>SmartCoach.startScanning(connectToLastPairedDevice = true)<br>SmartCoach.sessionStateStream().first { it is SmartCoachSessionState.connected }<br>SmartCoach.startMeasuring().collect { data -&gt; show(data.measurement.value, data.measurement.unit) }</code></pre><span class="copy-tooltip"><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div><span class="copy-icon"></span></span></div><p class="paragraph">Android-specific:</p><ul><li><p class="paragraph"><a href="configure.html">configure</a> takes a <a href="https://developer.android.com/reference/kotlin/android/content/Context.html">Context</a>.</p></li><li><p class="paragraph">The host app must request runtime permissions before scanning or connecting: <code class="lang-kotlin">BLUETOOTH_SCAN</code> and <code class="lang-kotlin">BLUETOOTH_CONNECT</code> on Android 12+, <code class="lang-kotlin">ACCESS_FINE_LOCATION</code> below. The SDK declares them in its manifest. A missing one throws <a href="../-smart-coach-error-code/permission-denied/index.html">SmartCoachErrorCode.permissionDenied</a>.</p></li><li><p class="paragraph">While connected, the SDK runs a foreground service and shows a notification, configured with <a href="../-smart-coach-device-configuration-options/notification.html">SmartCoachDeviceConfigurationOptions.notification</a>.</p></li></ul><p class="paragraph">Entitlements: the API key decides which radar models the app may scan for, connect to and measure with. The SDK fetches them from Pocket Radar the first time a call needs them (so that call needs network access) and refreshes them as they expire; offline, the last ones fetched stay valid for about 21 days. A call the key doesn't allow throws <a href="../-smart-coach-error-code/feature-not-available/index.html">SmartCoachErrorCode.featureNotAvailable</a>; entitlements that can't be fetched or verified throw <a href="../-smart-coach-error-code/invalid-entitlements/index.html">SmartCoachErrorCode.invalidEntitlements</a>.</p></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="FUNCTION">
+        <h2 class="tableheader">Functions</h2>
+        <div class="table"><a data-name="726699954%2FFunctions%2F1106108632" anchor-label="configure" id="726699954%2FFunctions%2F1106108632" data-filterable-set=":smartcoach/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":smartcoach/main" data-filterable-set=":smartcoach/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="configure.html"><span><span>configure</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="726699954%2FFunctions%2F1106108632"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":smartcoach/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="configure.html"><span class="token function">configure</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">context<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/content/Context.html">Context</a><span class="token punctuation">, </span></span><span class="parameter ">deviceConfigurationOptions<span class="token operator">: </span><a href="../-smart-coach-device-configuration-options/index.html">SmartCoachDeviceConfigurationOptions</a><span class="token operator">?</span><span class="token operator"> = </span>null</span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Configures the SDK. Call once, typically from <code class="lang-kotlin">Application.onCreate</code>, before any other call.</p></div><div class="symbol monospace"><span class="token keyword">fun </span><a href="configure.html"><span class="token function">configure</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">context<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/content/Context.html">Context</a><span class="token punctuation">, </span></span><span class="parameter ">firstParty<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token punctuation">, </span></span><span class="parameter ">deviceConfigurationOptions<span class="token operator">: </span><a href="../-smart-coach-device-configuration-options/index.html">SmartCoachDeviceConfigurationOptions</a><span class="token operator">?</span><span class="token operator"> = </span>null</span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Configures the SDK for a PocketRadar first-party app. Not part of the partner API.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-119735397%2FFunctions%2F1106108632" anchor-label="connect" id="-119735397%2FFunctions%2F1106108632" data-filterable-set=":smartcoach/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":smartcoach/main" data-filterable-set=":smartcoach/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="connect.html"><span><span>connect</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-119735397%2FFunctions%2F1106108632"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":smartcoach/main"><div class="symbol monospace"><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="connect.html"><span class="token function">connect</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">to<span class="token operator">: </span><a href="../-smart-coach-radar/index.html">SmartCoachRadar</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Connects to <a href="connect.html">to</a>, usually a radar from <a href="../-smart-coach-session-state/scanning/index.html">SmartCoachSessionState.scanning</a>. Returns once the connection has started; the radar is ready for commands when the session reaches <a href="../-smart-coach-session-state/connected/index.html">SmartCoachSessionState.connected</a>, which only happens once the radar's encryption handshake has finished. A handshake that fails, or doesn't finish within 10 seconds, ends in <a href="../-smart-coach-session-state/disconnected/index.html">SmartCoachSessionState.disconnected</a> with <a href="../-smart-coach-error-code/failed-to-connect/index.html">SmartCoachErrorCode.failedToConnect</a>.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1682198356%2FFunctions%2F1106108632" anchor-label="currentSessionState" id="1682198356%2FFunctions%2F1106108632" data-filterable-set=":smartcoach/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":smartcoach/main" data-filterable-set=":smartcoach/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="current-session-state.html"><span>current</span><wbr></wbr><span>Session</span><wbr></wbr><span><span>State</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1682198356%2FFunctions%2F1106108632"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":smartcoach/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="current-session-state.html"><span class="token function">currentSessionState</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-smart-coach-session-state/index.html">SmartCoachSessionState</a></div><div class="brief "><p class="paragraph">The session's current state. Before <a href="configure.html">configure</a> it is <a href="../-smart-coach-session-state/disconnected/index.html">SmartCoachSessionState.disconnected</a> with no error.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1385998986%2FFunctions%2F1106108632" anchor-label="disconnect" id="-1385998986%2FFunctions%2F1106108632" data-filterable-set=":smartcoach/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":smartcoach/main" data-filterable-set=":smartcoach/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="disconnect.html"><span><span>disconnect</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1385998986%2FFunctions%2F1106108632"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":smartcoach/main"><div class="symbol monospace"><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="disconnect.html"><span class="token function">disconnect</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Disconnects from the radar. Never throws; a failure is reported as <a href="../-smart-coach-session-state/disconnected/index.html">SmartCoachSessionState.disconnected</a> with an error. Not followed by an automatic reconnect.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-386512848%2FFunctions%2F1106108632" anchor-label="getVersion" id="-386512848%2FFunctions%2F1106108632" data-filterable-set=":smartcoach/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":smartcoach/main" data-filterable-set=":smartcoach/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-version.html"><span>get</span><wbr></wbr><span><span>Version</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-386512848%2FFunctions%2F1106108632"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":smartcoach/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="get-version.html"><span class="token function">getVersion</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph">The SDK version, for example <code class="lang-kotlin">0.1.0</code>.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1222319212%2FFunctions%2F1106108632" anchor-label="measurementStream" id="1222319212%2FFunctions%2F1106108632" data-filterable-set=":smartcoach/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":smartcoach/main" data-filterable-set=":smartcoach/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="measurement-stream.html"><span>measurement</span><wbr></wbr><span><span>Stream</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1222319212%2FFunctions%2F1106108632"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":smartcoach/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="measurement-stream.html"><span class="token function">measurementStream</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><span data-unresolved-link="kotlinx.coroutines.flow/Flow///PointingToDeclaration/">Flow</span><span class="token operator">&lt;</span><a href="../-measurement-data/index.html">MeasurementData</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Readings from the connected radar in whatever mode it is in, without sending it any command; <a href="start-measuring.html">startMeasuring</a> by contrast tells an idle radar to start. The flow completes when the radar is lost or disconnected. Android only so far.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1251555593%2FFunctions%2F1106108632" anchor-label="sessionStateStream" id="-1251555593%2FFunctions%2F1106108632" data-filterable-set=":smartcoach/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":smartcoach/main" data-filterable-set=":smartcoach/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="session-state-stream.html"><span>session</span><wbr></wbr><span>State</span><wbr></wbr><span><span>Stream</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1251555593%2FFunctions%2F1106108632"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":smartcoach/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="session-state-stream.html"><span class="token function">sessionStateStream</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><span data-unresolved-link="kotlinx.coroutines.flow/StateFlow///PointingToDeclaration/">StateFlow</span><span class="token operator">&lt;</span><a href="../-smart-coach-session-state/index.html">SmartCoachSessionState</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">The session's current state and every change to it. A <span data-unresolved-link="kotlinx.coroutines.flow/StateFlow///PointingToDeclaration/">StateFlow</span> stands in for iOS's <code class="lang-kotlin">AsyncStream</code>: collect it for changes, or read <code class="lang-kotlin">value</code> (the same as <a href="current-session-state.html">currentSessionState</a>).</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1990986306%2FFunctions%2F1106108632" anchor-label="setMeasurementUnit" id="1990986306%2FFunctions%2F1106108632" data-filterable-set=":smartcoach/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":smartcoach/main" data-filterable-set=":smartcoach/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-measurement-unit.html"><span>set</span><wbr></wbr><span>Measurement</span><wbr></wbr><span><span>Unit</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1990986306%2FFunctions%2F1106108632"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":smartcoach/main"><div class="symbol monospace"><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="set-measurement-unit.html"><span class="token function">setMeasurementUnit</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">unit<span class="token operator">: </span><a href="../-radar-measurement-unit/index.html">RadarMeasurementUnit</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Changes the unit the radar displays and reports in. Returns once the radar confirms; the connected radar's <a href="../-smart-coach-radar/measurement-unit.html">SmartCoachRadar.measurementUnit</a> updates at the same time.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1890180894%2FFunctions%2F1106108632" anchor-label="setSensitivity" id="-1890180894%2FFunctions%2F1106108632" data-filterable-set=":smartcoach/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":smartcoach/main" data-filterable-set=":smartcoach/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-sensitivity.html"><span>set</span><wbr></wbr><span><span>Sensitivity</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1890180894%2FFunctions%2F1106108632"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":smartcoach/main"><div class="symbol monospace"><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="set-sensitivity.html"><span class="token function">setSensitivity</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">sensitivity<span class="token operator">: </span><a href="../-radar-sensitivity/index.html">RadarSensitivity</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Sets detection sensitivity on a SmartCoach 1 radar. The radar resets to <a href="../-radar-sensitivity/-companion/default.html">RadarSensitivity.default</a> on every connection.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="538718918%2FFunctions%2F1106108632" anchor-label="setSpeedRange" id="538718918%2FFunctions%2F1106108632" data-filterable-set=":smartcoach/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":smartcoach/main" data-filterable-set=":smartcoach/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-speed-range.html"><span>set</span><wbr></wbr><span>Speed</span><wbr></wbr><span><span>Range</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="538718918%2FFunctions%2F1106108632"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":smartcoach/main"><div class="symbol monospace"><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="set-speed-range.html"><span class="token function">setSpeedRange</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">range<span class="token operator">: </span><a href="../-radar-speed-range/index.html">RadarSpeedRange</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Narrows the speeds the radar reports. The radar resets to <a href="../-radar-speed-range/-companion/full.html">RadarSpeedRange.full</a> on every connection, so apply it again after reconnecting.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1989153319%2FFunctions%2F1106108632" anchor-label="startMeasuring" id="-1989153319%2FFunctions%2F1106108632" data-filterable-set=":smartcoach/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":smartcoach/main" data-filterable-set=":smartcoach/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="start-measuring.html"><span>start</span><wbr></wbr><span><span>Measuring</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1989153319%2FFunctions%2F1106108632"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":smartcoach/main"><div class="symbol monospace"><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="start-measuring.html"><span class="token function">startMeasuring</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><span data-unresolved-link="kotlinx.coroutines.flow/Flow///PointingToDeclaration/">Flow</span><span class="token operator">&lt;</span><a href="../-measurement-data/index.html">MeasurementData</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Returns a flow of readings from the connected radar.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1422560430%2FFunctions%2F1106108632" anchor-label="startScanning" id="1422560430%2FFunctions%2F1106108632" data-filterable-set=":smartcoach/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":smartcoach/main" data-filterable-set=":smartcoach/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="start-scanning.html"><span>start</span><wbr></wbr><span><span>Scanning</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1422560430%2FFunctions%2F1106108632"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":smartcoach/main"><div class="symbol monospace"><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="start-scanning.html"><span class="token function">startScanning</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">timeout<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.time/-duration/index.html">Duration</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">connectToLastPairedDevice<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">false</span></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Starts scanning for radars. Found radars appear in <a href="../-smart-coach-session-state/scanning/index.html">SmartCoachSessionState.scanning</a>. Scanning stops by itself once a radar connects.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="961055279%2FFunctions%2F1106108632" anchor-label="stopMeasuring" id="961055279%2FFunctions%2F1106108632" data-filterable-set=":smartcoach/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":smartcoach/main" data-filterable-set=":smartcoach/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="stop-measuring.html"><span>stop</span><wbr></wbr><span><span>Measuring</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="961055279%2FFunctions%2F1106108632"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":smartcoach/main"><div class="symbol monospace"><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="stop-measuring.html"><span class="token function">stopMeasuring</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Tells the radar to stop measuring and completes the flow from <a href="start-measuring.html">startMeasuring</a>. Harmless when not measuring; never affects the connection.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1018018337%2FFunctions%2F1106108632" anchor-label="stopScanning" id="-1018018337%2FFunctions%2F1106108632" data-filterable-set=":smartcoach/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":smartcoach/main" data-filterable-set=":smartcoach/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="stop-scanning.html"><span>stop</span><wbr></wbr><span><span>Scanning</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1018018337%2FFunctions%2F1106108632"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":smartcoach/main"><div class="symbol monospace"><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="stop-scanning.html"><span class="token function">stopScanning</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Stops scanning. Harmless when not scanning; never affects an established connection.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="footer">
+        <div class="footer--container">
+            <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+            <div class="footer--content">
+                <div>
+                    <span>Generated by </span>
+                    <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                        Dokka
+                    </a>
+                    <div>© 2026 Copyright</div>
+                </div>
+            </div>
+        </div>
+    </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
